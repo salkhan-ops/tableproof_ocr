@@ -1,5 +1,7 @@
 # TableProof OCR
 
+Table extraction from annual accounts, reliably.
+
 Baseline extraction and deterministic native-text table reconstruction tools for born-digital PDFs.
 
 This project intentionally stops before OCR, ML table recognition, semantic validation, arithmetic checking, or automatic correction. The extraction CLI takes a PDF, a page number, and an optional table bounding box. It preserves:
@@ -139,3 +141,7 @@ pytest
 ```
 
 The tests create synthetic native-word tables and small born-digital PDFs. They verify extraction artifacts, row and column counts, cell text, empty-cell placement, deterministic reconstruction, footnote separation, merged spans, continuation joining modes, unresolved-line diagnostics, no-word-loss accounting, and benchmark regressions.
+
+## License
+
+Apache License 2.0. See `LICENSE`.
