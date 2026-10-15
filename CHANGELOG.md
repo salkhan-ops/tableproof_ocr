@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.2.1 (2026-10-15)
+
+### Fixed
+- OCR pages skewed by less than 1 degree are no longer resampled, but their **word
+  coordinates are straightened** before reconstruction. At 0.8 degrees a label and its
+  amounts drifted onto separate rows (about 5.6 pt over a 400 pt line), producing blank-label
+  rows. `Diagnostics.deskew_degrees` reports the angle either way.
+
 ## v0.2.0 (2026-10-15)
 
 Library packaging, licensing and correctness fixes found by an external evaluation on

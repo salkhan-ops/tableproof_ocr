@@ -15,6 +15,7 @@ dataclasses with no document content beyond the cells themselves.
 from __future__ import annotations
 
 import io
+import math
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -24,7 +25,7 @@ from tableproof import __version__
 from tableproof.models import BoundingBox, ReconstructionOptions, TableGrid, WordBox
 from tableproof.ocr_adapter import correct_significance_markers
 from tableproof.ocr_engine import TesseractOcrEngine
-from tableproof.ocr_image_preprocessor import deskew, preprocess_image
+from tableproof.ocr_image_preprocessor import deskew, estimate_skew, preprocess_image
 from tableproof.pdf_extractor import extract_words, render_page
 from tableproof.table_reconstructor import ReconstructionError, reconstruct_table_grid
 
@@ -117,8 +118,13 @@ def ocr_page(
     picture = image if isinstance(image, Image.Image) else Image.open(io.BytesIO(image))
     picture = picture.convert("L")
     skew = 0.0
+    residual = 0.0
     if straighten:
         picture, skew = deskew(picture)
+        if skew == 0.0:
+            # Small skews: leave the pixels alone (a second resampling costs OCR accuracy) but
+            # straighten the word coordinates, so a label and its amounts stay on one row.
+            residual = estimate_skew(picture)
     prepared = preprocess_image(picture)
     factor = prepared.width / picture.width  # preprocessing upscales
     buffer = io.BytesIO()
@@ -127,19 +133,38 @@ def ocr_page(
     words = [correct_significance_markers(w) for w in result.words] if correct_markers else list(
         result.words
     )
-    # Back to the page image's pixels, then to PDF points.
+    # Back to the page image's pixels (straightening small skews), then to PDF points.
     to_points = 72.0 / dpi / factor
-    boxes = [
-        WordBox(i, w.text, BoundingBox(w.x0 * to_points, w.y0 * to_points, w.x1 * to_points,
-                                       w.y1 * to_points))
-        for i, w in enumerate(words)
-    ]
+    centre = (prepared.width / 2, prepared.height / 2)
+    boxes = []
+    for i, w in enumerate(words):
+        x0, y0, x1, y1 = _unrotate(w.x0, w.y0, w.x1, w.y1, residual, centre)
+        boxes.append(
+            WordBox(i, w.text, BoundingBox(x0 * to_points, y0 * to_points, x1 * to_points,
+                                           y1 * to_points))
+        )
     grid = _reconstruct(boxes, options)
     if grid is None:
         return None
     raw = {i: (w.raw_text if w.raw_text is not None else w.text) for i, w in enumerate(words)}
     conf = {i: w.confidence for i, w in enumerate(words)}
-    return _result(grid, page, "ocr", raw, conf=conf, total=len(words), skew=skew)
+    return _result(grid, page, "ocr", raw, conf=conf, total=len(words), skew=skew or residual)
+
+
+def _unrotate(
+    x0: float, y0: float, x1: float, y1: float, degrees: float, centre: tuple[float, float]
+) -> tuple[float, float, float, float]:
+    """Move a word box so its centre is where it would be on a straight page (size kept)."""
+    if abs(degrees) < 0.05:
+        return x0, y0, x1, y1
+    theta = math.radians(degrees)
+    cx, cy = (x0 + x1) / 2 - centre[0], (y0 + y1) / 2 - centre[1]
+    # The page was rotated by +degrees (counter-clockwise); undo it in image coordinates.
+    nx = cx * math.cos(theta) - cy * math.sin(theta)
+    ny = cx * math.sin(theta) + cy * math.cos(theta)
+    half_w, half_h = (x1 - x0) / 2, (y1 - y0) / 2
+    nx, ny = nx + centre[0], ny + centre[1]
+    return nx - half_w, ny - half_h, nx + half_w, ny + half_h
 
 
 def _reconstruct(boxes: list[WordBox], options: ReconstructionOptions) -> TableGrid | None:

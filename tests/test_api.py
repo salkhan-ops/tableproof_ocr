@@ -81,3 +81,19 @@ def test_ocr_correction_pass_is_off_by_default() -> None:
     cell = next(c for c in changed.cells if "130,446" in c.text)
     assert "130,446*" in cell.text
     assert '130,446"' in cell.raw_text  # raw text kept
+
+
+@needs_tesseract
+@pytest.mark.parametrize("angle", [0.8, -0.8])
+def test_small_skew_keeps_label_and_amounts_on_one_row(angle: float) -> None:
+    page = render(SOFP, 1, dpi=300).convert("L")
+    skewed = page.rotate(angle, resample=Image.Resampling.BICUBIC, fillcolor=255)
+    result = ocr_page(skewed, 1, dpi=300)
+    assert result is not None
+    rows: dict[int, list[str]] = {}
+    for cell in result.cells:
+        rows.setdefault(cell.row, []).append(cell.text)
+    deposits = [texts for texts in rows.values() if any("deposits" in t for t in texts)]
+    assert deposits
+    assert "2,500" in " ".join(deposits[0])
+    assert result.diagnostics.deskew_degrees == pytest.approx(angle, abs=0.25)
