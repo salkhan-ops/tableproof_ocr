@@ -5,12 +5,12 @@ from pathlib import Path
 import json
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
 from openpyxl import load_workbook
 
-from models import BoundingBox, WordBox
-from table_reconstructor import (
+from tableproof.models import BoundingBox, WordBox
+from tableproof.table_reconstructor import (
     WARNING_AMBIGUOUS_COLUMN,
     WARNING_EXPECTED_EMPTY_CELL_PATTERN,
     WARNING_FOOTNOTE_EXCLUDED,

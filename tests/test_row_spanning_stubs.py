@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from test_span_candidate_generator import words
-from table_reconstructor import reconstruct_table_grid
+from tableproof.table_reconstructor import reconstruct_table_grid
 
 
 def test_nested_row_group_stubs_and_genuine_empty_cell() -> None:

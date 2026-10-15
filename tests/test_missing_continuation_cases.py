@@ -3,10 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from models import BoundingBox, WordBox
-from table_reconstructor import reconstruct_table_grid
+from tableproof.models import BoundingBox, WordBox
+from tableproof.table_reconstructor import reconstruct_table_grid
 
 
 def wb(index: int, text: str, x0: float, y: float) -> WordBox:

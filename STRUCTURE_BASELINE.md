@@ -58,5 +58,5 @@ Git commit hash: unavailable - this workspace is not a git repository.
 ## Regression Command
 
 ```bash
-.venv/bin/python scripts/run_structure_regression.py
+uv run python scripts/run_structure_regression.py
 ```

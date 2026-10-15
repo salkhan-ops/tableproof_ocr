@@ -3,10 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from models import BoundingBox, SpanCandidate, SpanScoreComponents
-from span_constraint_solver import solve_span_candidates
+from tableproof.models import BoundingBox, SpanCandidate, SpanScoreComponents
+from tableproof.span_constraint_solver import solve_span_candidates
 
 
 def cand(cid: str, col: int, span: int, score: float) -> SpanCandidate:

@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> int:
     commands = [
-        [".venv/bin/python", "-m", "pytest"],
-        [".venv/bin/python", "src/span_audit.py"],
+        [sys.executable, "-m", "pytest"],
+        [sys.executable, "tools/span_audit.py"],
     ]
     for command in commands:
         result = subprocess.run(command, cwd=ROOT, text=True)

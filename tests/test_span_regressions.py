@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from test_span_candidate_generator import words
-from table_reconstructor import reconstruct_table_grid
+from tableproof.table_reconstructor import reconstruct_table_grid
 
 
 def test_sparse_all_text_row_does_not_become_span() -> None:

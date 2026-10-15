@@ -5,10 +5,10 @@ import sys
 
 from PIL import Image
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from models import BoundingBox
-from ocr_adapter import (
+from tableproof.models import BoundingBox
+from tableproof.ocr_adapter import (
     correct_significance_markers,
     image_bbox_to_pdf_bbox,
     native_words_to_ocr_ground_truth,
@@ -17,7 +17,7 @@ from ocr_adapter import (
 )
 from ocr_benchmark_runner import _make_variant
 from ocr_evaluator import evaluate_ocr_words, match_words_by_geometry
-from ocr_models import OcrResult, OcrWordBox
+from tableproof.ocr_models import OcrResult, OcrWordBox
 
 
 def word(text: str, x0: float, y0: float, x1: float, y1: float) -> OcrWordBox:

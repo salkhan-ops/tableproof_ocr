@@ -7,12 +7,12 @@ import sys
 
 from openpyxl import load_workbook
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from models import BoundingBox, Cell, TableRow
-from span_candidate_generator import generate_span_candidates
-from span_constraint_solver import solve_span_candidates
-from table_reconstructor import load_words_json, reconstruct_from_words_file, reconstruct_table_grid
+from tableproof.models import BoundingBox, Cell, TableRow
+from tableproof.span_candidate_generator import generate_span_candidates
+from tableproof.span_constraint_solver import solve_span_candidates
+from tableproof.table_reconstructor import load_words_json, reconstruct_from_words_file, reconstruct_table_grid
 
 
 ROOT = Path(__file__).resolve().parents[1]

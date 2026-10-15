@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from test_span_candidate_generator import words
-from table_reconstructor import reconstruct_table_grid
+from tableproof.table_reconstructor import reconstruct_table_grid
 
 
 def test_asymmetric_child_group_widths_are_preserved() -> None:

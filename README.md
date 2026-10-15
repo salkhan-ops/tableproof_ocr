@@ -21,30 +21,32 @@ data/ground_truth/
 outputs/extracted_tables/
 outputs/diagnostics/
 outputs/evaluation/
-src/
+src/tableproof/   # the library (installable package)
+tools/            # CLI, benchmark runners and audits (write to outputs/)
 tests/
 ```
 
 ## Setup
 
 ```bash
-python -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
+uv sync            # Python 3.12+; installs tableproof (editable) and the dev tools
+uv run pytest
 ```
+
+Library use: `pip install tableproof` from a release wheel, then `import tableproof`.
 
 ## Extraction CLI
 
 Extract the full page:
 
 ```bash
-python src/cli.py data/raw_pdfs/sample.pdf 1
+python tools/cli.py data/raw_pdfs/sample.pdf 1
 ```
 
 Extract a table area:
 
 ```bash
-python src/cli.py data/raw_pdfs/sample.pdf 1 --bbox 72,120,520,360
+python tools/cli.py data/raw_pdfs/sample.pdf 1 --bbox 72,120,520,360
 ```
 
 Bounding boxes use PDF point coordinates in `x0,y0,x1,y1` order. Page numbers are 1-based.
@@ -60,13 +62,13 @@ By default, outputs are written to `outputs/extracted_tables/`:
 Reconstruct a table grid from existing native words JSON:
 
 ```bash
-python src/cli.py reconstruct outputs/extracted_tables/sample_page_001_words.json
+python tools/cli.py reconstruct outputs/extracted_tables/sample_page_001_words.json
 ```
 
 Optional overrides:
 
 ```bash
-python src/cli.py reconstruct outputs/extracted_tables/sample_page_001_words.json \
+python tools/cli.py reconstruct outputs/extracted_tables/sample_page_001_words.json \
   --output-dir outputs/evaluation \
   --row-tolerance 8 \
   --column-tolerance 12 \
@@ -92,7 +94,7 @@ Continuation handling is deterministic and native-text only. It can resolve wrap
 Run the five-table born-digital benchmark:
 
 ```bash
-python src/benchmark_runner.py --manifest data/benchmark_manifest.csv
+python tools/benchmark_runner.py --manifest data/benchmark_manifest.csv
 ```
 
 The benchmark includes CSV ground truth for ordinary tables and XLSX plus structured JSON ground truth for merged-cell tables. It writes table-level predictions, cell comparisons, diagnostics, aggregate metrics, and a markdown report under `outputs/evaluation/` and `outputs/diagnostics/`.
@@ -105,7 +107,7 @@ Run the continuation benchmark fixtures:
 
 ```bash
 python scripts/create_continuation_benchmark_fixtures.py
-python src/continuation_benchmark_runner.py
+python tools/continuation_benchmark_runner.py
 ```
 
 This writes continuation table results, decision comparisons, errors, a JSON summary, and a markdown report under `outputs/evaluation/`.
@@ -114,18 +116,18 @@ This writes continuation table results, decision comparisons, errors, a JSON sum
 
 Everything above is the frozen `v0.1.0-born-digital-structure-baseline` (see `STRUCTURE_BASELINE.md`), which is native-text only and explicitly excludes OCR. A separate OCR layer was added after that freeze and is not yet part of a versioned baseline.
 
-The OCR layer runs Tesseract (`src/ocr_engine.py`) over rendered table images, with deterministic image preprocessing (`src/ocr_image_preprocessor.py`) and a significance-marker correction pass (`src/ocr_enhancement_runner.py`) on top of the raw OCR output.
+The OCR layer runs Tesseract (`src/tableproof/ocr_engine.py`) over rendered table images, with deterministic image preprocessing (`src/tableproof/ocr_image_preprocessor.py`) and a significance-marker correction pass (`tools/ocr_enhancement_runner.py`) on top of the raw OCR output.
 
 Run the OCR benchmark (renders 5 source tables x 4 degradation variants = 20 images from `data/ocr_benchmark_manifest.csv`, runs raw Tesseract, and scores against ground truth):
 
 ```bash
-python src/ocr_benchmark_runner.py
+python tools/ocr_benchmark_runner.py
 ```
 
 Run the enhanced pass (preprocessing + significance-marker correction) and compare against the raw baseline:
 
 ```bash
-python src/ocr_enhancement_runner.py
+python tools/ocr_enhancement_runner.py
 ```
 
 Both write word/table/geometry results, an error-attribution CSV, a JSON summary, and a markdown report under `outputs/ocr/evaluation/` and `outputs/ocr_enhanced/evaluation/`.

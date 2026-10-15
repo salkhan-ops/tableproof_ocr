@@ -7,10 +7,10 @@ import fitz
 
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from models import BoundingBox
-from pdf_extractor import extract_table_area
+from tableproof.models import BoundingBox
+from tableproof.pdf_extractor import extract_table_area
 
 
 def _create_sample_pdf(path: Path) -> None:
