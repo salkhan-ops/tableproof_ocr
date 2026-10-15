@@ -1,0 +1,122 @@
+{
+  "table_id": "fs06_note_ppe_currency",
+  "kinds": [
+    "header",
+    "units",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "total"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Land",
+        "Buildings",
+        "Plant and machinery",
+        "Total"
+      ],
+      [
+        "",
+        "USD",
+        "USD",
+        "USD",
+        "USD"
+      ],
+      [
+        "Cost",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "At 1 July 2024",
+        "$ 120,000",
+        "$ 455,300",
+        "$ 1,302,800",
+        "$ 1,878,100"
+      ],
+      [
+        "Additions",
+        "-",
+        "12,450",
+        "179,600",
+        "192,050"
+      ],
+      [
+        "Disposals",
+        "-",
+        "-",
+        "(8,300)",
+        "(8,300)"
+      ],
+      [
+        "At 30 June 2025",
+        "$ 120,000",
+        "$ 467,750",
+        "$ 1,474,100",
+        "$ 2,061,850"
+      ],
+      [
+        "Accumulated depreciation",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "At 1 July 2024",
+        "-",
+        "(152,400)",
+        "(527,250)",
+        "(679,650)"
+      ],
+      [
+        "Charge for the year *",
+        "-",
+        "(22,700)",
+        "(122,500)",
+        "(145,200)"
+      ],
+      [
+        "On disposals",
+        "-",
+        "-",
+        "4,200",
+        "4,200"
+      ],
+      [
+        "At 30 June 2025",
+        "-",
+        "(175,100)",
+        "(645,550)",
+        "(820,650)"
+      ],
+      [
+        "Net book value at 30 June 2025",
+        "$ 120,000",
+        "$ 292,650",
+        "$ 828,550",
+        "$ 1,241,200"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Holdings Limited",
+    "Notes to the financial statements",
+    "5  Property, plant and equipment"
+  ],
+  "footnotes": [
+    "* Includes Rs. 3,100 thousand charged to cost of sales.",
+    "Source: synthetic data, no real entity."
+  ]
+}

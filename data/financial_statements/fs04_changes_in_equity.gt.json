@@ -1,0 +1,111 @@
+{
+  "table_id": "fs04_changes_in_equity",
+  "kinds": [
+    "header",
+    "units",
+    "item",
+    "item",
+    "item",
+    "item",
+    "total",
+    "item",
+    "item",
+    "item",
+    "item",
+    "total"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Share capital",
+        "Retained earnings",
+        "Revaluation reserve",
+        "Total"
+      ],
+      [
+        "",
+        "Rs. '000",
+        "Rs. '000",
+        "Rs. '000",
+        "Rs. '000"
+      ],
+      [
+        "Balance at 1 July 2023",
+        "500,000",
+        "702,118",
+        "(6,200)",
+        "1,195,918"
+      ],
+      [
+        "Profit for the year",
+        "-",
+        "129,122",
+        "-",
+        "129,122"
+      ],
+      [
+        "Other comprehensive loss",
+        "-",
+        "-",
+        "(2,700)",
+        "(2,700)"
+      ],
+      [
+        "Dividend paid",
+        "-",
+        "(50,000)",
+        "-",
+        "(50,000)"
+      ],
+      [
+        "Balance at 30 June 2024",
+        "500,000",
+        "781,240",
+        "(8,900)",
+        "1,272,340"
+      ],
+      [
+        "Balance at 1 July 2024",
+        "500,000",
+        "781,240",
+        "(8,900)",
+        "1,272,340"
+      ],
+      [
+        "Profit for the year",
+        "-",
+        "111,371",
+        "-",
+        "111,371"
+      ],
+      [
+        "Other comprehensive loss",
+        "-",
+        "-",
+        "(3,550)",
+        "(3,550)"
+      ],
+      [
+        "Dividend paid",
+        "-",
+        "(50,000)",
+        "-",
+        "(50,000)"
+      ],
+      [
+        "Balance at 30 June 2025",
+        "500,000",
+        "842,611",
+        "(12,450)",
+        "1,330,161"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Holdings Limited",
+    "Statement of changes in equity",
+    "For the year ended 30 June 2025"
+  ],
+  "footnotes": []
+}

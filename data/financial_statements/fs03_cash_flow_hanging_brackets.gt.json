@@ -1,0 +1,134 @@
+{
+  "table_id": "fs03_cash_flow_hanging_brackets",
+  "kinds": [
+    "header",
+    "units",
+    "section",
+    "item",
+    "item",
+    "item",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "section",
+    "item",
+    "item",
+    "subtotal",
+    "subtotal",
+    "item",
+    "total"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Note",
+        "2025",
+        "2024"
+      ],
+      [
+        "",
+        "",
+        "Rs. '000",
+        "Rs. '000"
+      ],
+      [
+        "Cash flows from operating activities",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Profit before tax",
+        "",
+        "1,373,549",
+        "1,254,407"
+      ],
+      [
+        "Adjustments for:",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Depreciation",
+        "5",
+        "145,200",
+        "139,880"
+      ],
+      [
+        "Finance costs",
+        "",
+        "88,412",
+        "95,003"
+      ],
+      [
+        "Increase in inventories",
+        "",
+        "(23,666)",
+        "(41,207)"
+      ],
+      [
+        "Income tax paid",
+        "",
+        "(401,210)",
+        "(352,904)"
+      ],
+      [
+        "Net cash generated from operating activities",
+        "",
+        "1,182,285",
+        "1,095,179"
+      ],
+      [
+        "Cash flows from investing activities",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Purchase of property, plant and equipment",
+        "",
+        "(192,050)",
+        "(176,300)"
+      ],
+      [
+        "Proceeds from disposal",
+        "",
+        "4,100",
+        "-"
+      ],
+      [
+        "Net cash used in investing activities",
+        "",
+        "(187,950)",
+        "(176,300)"
+      ],
+      [
+        "Net (decrease) / increase in cash",
+        "",
+        "(26,395)",
+        "18,207"
+      ],
+      [
+        "Cash at beginning of the year",
+        "",
+        "102,906",
+        "84,699"
+      ],
+      [
+        "Cash at end of the year",
+        "9",
+        "76,511",
+        "102,906"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Industries Plc",
+    "Statement of cash flows",
+    "For the year ended 30 June 2025"
+  ],
+  "footnotes": []
+}

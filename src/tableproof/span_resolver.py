@@ -15,6 +15,8 @@ def resolve_spans(rows: list[TableRow], metrics: dict[str, Any] | None = None) -
     metrics = dict(metrics or {})
     candidates = generate_span_candidates(rows, metrics)
     selected, rejected, conflicts, solution = solve_span_candidates(candidates)
+    selected, hiding = _drop_spans_hiding_words(rows, selected)
+    rejected = [*rejected, *hiding]
     selected_ids = {candidate.candidate_id for candidate in selected}
     replacements: dict[tuple[int, int], Cell] = {}
     covered: dict[tuple[int, int], tuple[int, int]] = {}
@@ -87,6 +89,15 @@ def resolve_spans(rows: list[TableRow], metrics: dict[str, Any] | None = None) -
     ]
     warnings.extend(
         ReconstructionWarning(
+            "SPAN_WOULD_HIDE_WORDS",
+            f"Span candidate {candidate.candidate_id} was rejected: it covers cells with their own text",
+            row_index=candidate.anchor_row,
+            column_index=candidate.anchor_column,
+        )
+        for candidate in hiding
+    )
+    warnings.extend(
+        ReconstructionWarning(
             "UNRESOLVED_SPAN_STRUCTURE",
             f"Span candidate {span.candidate_ids[0]} was preserved unresolved",
             row_index=span.anchor_row,
@@ -129,3 +140,22 @@ def resolve_spans(rows: list[TableRow], metrics: dict[str, Any] | None = None) -
         ],
         warnings=warnings,
     )
+
+
+def _drop_spans_hiding_words(rows: list[TableRow], selected: list) -> tuple[list, list]:
+    """A span may cover a cell only if every word of that cell is part of the span.
+
+    Otherwise the covered cell's own text (e.g. a line-item label under a section heading)
+    would vanish from the output. Such candidates are rejected and the pre-span grid is kept.
+    """
+    kept, hiding = [], []
+    for candidate in selected:
+        own = set(candidate.source_word_indices)
+        hides = False
+        for r, c in map(tuple, candidate.covered_coordinates[1:]):
+            if r < len(rows) and c < len(rows[r].cells):
+                if set(rows[r].cells[c].source_word_indices) - own:
+                    hides = True
+                    break
+        (hiding if hides else kept).append(candidate)
+    return kept, hiding

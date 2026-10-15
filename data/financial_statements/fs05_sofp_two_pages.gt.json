@@ -1,0 +1,197 @@
+{
+  "table_id": "fs05_sofp_two_pages",
+  "kinds": [
+    "header",
+    "units",
+    "section",
+    "item",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "total",
+    "section",
+    "item",
+    "item",
+    "subtotal",
+    "section",
+    "item",
+    "item",
+    "section",
+    "item",
+    "total"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Note",
+        "2025",
+        "2024"
+      ],
+      [
+        "",
+        "",
+        "Rs. '000",
+        "Rs. '000"
+      ],
+      [
+        "Non-current assets",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Property, plant and equipment",
+        "4",
+        "3,410,200",
+        "3,155,870"
+      ],
+      [
+        "Right-of-use assets",
+        "5",
+        "211,450",
+        "240,115"
+      ],
+      [
+        "Investment property",
+        "6",
+        "98,000",
+        "98,000"
+      ],
+      [
+        "Deferred tax asset",
+        "7",
+        "-",
+        "12,300"
+      ],
+      [
+        "",
+        "",
+        "3,719,650",
+        "3,506,285"
+      ],
+      [
+        "Current assets",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Inventories",
+        "8",
+        "1,020,400",
+        "988,210"
+      ],
+      [
+        "Trade receivables",
+        "9",
+        "640,118",
+        "611,909"
+      ],
+      [
+        "Cash and bank balances",
+        "10",
+        "155,032",
+        "130,446"
+      ],
+      [
+        "",
+        "",
+        "1,815,550",
+        "1,730,565"
+      ],
+      [
+        "Total assets",
+        "",
+        "5,535,200",
+        "5,236,850"
+      ]
+    ],
+    [
+      [
+        "",
+        "Note",
+        "2025",
+        "2024"
+      ],
+      [
+        "",
+        "",
+        "Rs. '000",
+        "Rs. '000"
+      ],
+      [
+        "Equity",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Share capital",
+        "11",
+        "1,000,000",
+        "1,000,000"
+      ],
+      [
+        "Unappropriated profit",
+        "",
+        "2,104,560",
+        "1,890,300"
+      ],
+      [
+        "",
+        "",
+        "3,104,560",
+        "2,890,300"
+      ],
+      [
+        "Non-current liabilities",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Long-term loans",
+        "12",
+        "1,200,000",
+        "1,350,000"
+      ],
+      [
+        "Lease liabilities",
+        "13",
+        "180,640",
+        "205,550"
+      ],
+      [
+        "Current liabilities",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Trade and other payables",
+        "14",
+        "1,050,000",
+        "791,000"
+      ],
+      [
+        "Total equity and liabilities",
+        "",
+        "5,535,200",
+        "5,236,850"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Group Limited",
+    "Consolidated statement of financial position",
+    "As at 31 March 2025"
+  ],
+  "footnotes": []
+}

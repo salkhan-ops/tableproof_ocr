@@ -1,0 +1,127 @@
+{
+  "table_id": "fs02_pl_three_period",
+  "kinds": [
+    "header",
+    "units",
+    "item",
+    "item",
+    "subtotal",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "item",
+    "subtotal",
+    "item",
+    "total",
+    "item"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Note",
+        "2025",
+        "2024",
+        "2023"
+      ],
+      [
+        "",
+        "",
+        "$'000",
+        "$'000",
+        "$'000"
+      ],
+      [
+        "Revenue",
+        "13",
+        "8,402,115",
+        "7,950,330",
+        "7,110,004"
+      ],
+      [
+        "Cost of sales",
+        "14",
+        "(5,911,420)",
+        "(5,602,118)",
+        "(5,020,775)"
+      ],
+      [
+        "Gross profit",
+        "",
+        "2,490,695",
+        "2,348,212",
+        "2,089,229"
+      ],
+      [
+        "Distribution costs",
+        "",
+        "(612,004)",
+        "(588,140)",
+        "(540,110)"
+      ],
+      [
+        "Administrative expenses",
+        "",
+        "(431,950)",
+        "(410,662)",
+        "(398,001)"
+      ],
+      [
+        "Other income",
+        "15",
+        "15,220",
+        "\u2013",
+        "9,875"
+      ],
+      [
+        "Operating profit",
+        "",
+        "1,461,961",
+        "1,349,410",
+        "1,160,993"
+      ],
+      [
+        "Finance costs",
+        "16",
+        "(88,412)",
+        "(95,003)",
+        "(101,540)"
+      ],
+      [
+        "Profit before tax",
+        "",
+        "1,373,549",
+        "1,254,407",
+        "1,059,453"
+      ],
+      [
+        "Taxation",
+        "17",
+        "(398,329)",
+        "(363,778)",
+        "(307,241)"
+      ],
+      [
+        "Profit for the year",
+        "",
+        "975,220",
+        "890,629",
+        "752,212"
+      ],
+      [
+        "Earnings per share - basic (in $)",
+        "18",
+        "9.75",
+        "8.91",
+        "7.52"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Traders (Private) Limited",
+    "Statement of profit or loss",
+    "For the year ended 31 December 2025"
+  ],
+  "footnotes": []
+}

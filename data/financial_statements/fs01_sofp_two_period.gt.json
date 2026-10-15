@@ -1,0 +1,169 @@
+{
+  "table_id": "fs01_sofp_two_period",
+  "kinds": [
+    "header",
+    "units",
+    "section",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "total",
+    "section",
+    "item",
+    "item",
+    "item",
+    "subtotal",
+    "item",
+    "item",
+    "total"
+  ],
+  "pages": [
+    [
+      [
+        "",
+        "Note",
+        "2025",
+        "2024"
+      ],
+      [
+        "",
+        "",
+        "Rs. '000",
+        "Rs. '000"
+      ],
+      [
+        "ASSETS",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Non-current assets",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Property, plant and equipment",
+        "5",
+        "1,245,300",
+        "1,198,450"
+      ],
+      [
+        "Intangible assets",
+        "6",
+        "84,120",
+        "91,005"
+      ],
+      [
+        "Long-term deposits",
+        "",
+        "-",
+        "2,500"
+      ],
+      [
+        "",
+        "",
+        "1,329,420",
+        "1,291,955"
+      ],
+      [
+        "Current assets",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Inventories",
+        "7",
+        "412,880",
+        "389,214"
+      ],
+      [
+        "Trade and other receivables",
+        "8",
+        "298,045",
+        "275,330"
+      ],
+      [
+        "Cash and cash equivalents",
+        "9",
+        "76,511",
+        "102,906"
+      ],
+      [
+        "",
+        "",
+        "787,436",
+        "767,450"
+      ],
+      [
+        "Total assets",
+        "",
+        "2,116,856",
+        "2,059,405"
+      ],
+      [
+        "EQUITY AND LIABILITIES",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Share capital",
+        "10",
+        "500,000",
+        "500,000"
+      ],
+      [
+        "Retained earnings",
+        "",
+        "842,611",
+        "781,240"
+      ],
+      [
+        "Revaluation reserve",
+        "",
+        "(12,450)",
+        "(8,900)"
+      ],
+      [
+        "Total equity",
+        "",
+        "1,330,161",
+        "1,272,340"
+      ],
+      [
+        "Long-term financing",
+        "11",
+        "410,000",
+        "455,000"
+      ],
+      [
+        "Trade and other payables",
+        "12",
+        "376,695",
+        "332,065"
+      ],
+      [
+        "Total equity and liabilities",
+        "",
+        "2,116,856",
+        "2,059,405"
+      ]
+    ]
+  ],
+  "title": [
+    "Synthetic Holdings Limited",
+    "Statement of financial position",
+    "As at 30 June 2025"
+  ],
+  "footnotes": []
+}

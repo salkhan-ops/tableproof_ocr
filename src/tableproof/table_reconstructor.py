@@ -261,6 +261,25 @@ def reconstruct_table_grid(
             )
         )
 
+    # Account for words on the FINAL grid: a word placed before span resolution must still be
+    # in some cell after it. (Counting earlier let hidden labels pass as "no word loss".)
+    placed_before = {w for row in pre_span_rows for cell in row.cells for w in cell.source_word_indices}
+    placed_after = {w for row in rows for cell in row.cells for w in cell.source_word_indices}
+    hidden = sorted(placed_before - placed_after)
+    no_word_loss = dict(continuation_metrics.get("no_word_loss", {}))
+    no_word_loss["hidden_by_spans_word_indices"] = hidden
+    no_word_loss["assigned_word_count"] = len(placed_after)
+    no_word_loss["passed"] = bool(no_word_loss.get("passed", True)) and not hidden
+    continuation_metrics["no_word_loss"] = no_word_loss
+    if hidden:
+        warnings.append(
+            ReconstructionWarning(
+                "WORDS_HIDDEN_BY_SPAN",
+                f"{len(hidden)} word(s) are not in any output cell after span resolution",
+                word_indices=hidden,
+            )
+        )
+
     metrics["debug_enabled"] = 1.0 if debug else 0.0
     metrics["table_region"] = region.to_dict()
     metrics["continuation_resolution"] = continuation_metrics

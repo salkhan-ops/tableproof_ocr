@@ -221,7 +221,7 @@ def _specs() -> list[dict]:
                 ["Liabilities", "Current liabilities", "", "", ""],
                 ["", "Payables", "22", "17%", "25"],
             ],
-            [_span(0, 0, "Line", 3, 1, True, True), _span(0, 1, "Periods", 1, 4, True, False), _span(1, 1, "2023", 1, 2, True, False), _span(1, 3, "2024", 1, 2, True, False), _span(3, 0, "Assets", 5, 1, False, True), _span(3, 1, "Current assets", 3, 1, False, True), _span(6, 1, "Non-current assets", 2, 1, False, True), _span(8, 0, "Liabilities", 2, 1, False, True), _span(8, 1, "Current liabilities", 2, 1, False, True)],
+            [_span(0, 0, "Line", 3, 1, True, True), _span(0, 1, "Periods", 1, 4, True, False), _span(1, 1, "2023", 1, 2, True, False), _span(1, 3, "2024", 1, 2, True, False), _span(3, 0, "Assets", 5, 1, False, True), _span(8, 0, "Liabilities", 2, 1, False, True)],  # column-1 subsection headings are rows, not spans: they must not hide "Cash", "Inventory", ...
             [56, 170, 285, 385, 485],
             (48, 72, 580, 280),
             3,

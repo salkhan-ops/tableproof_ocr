@@ -121,48 +121,6 @@
       "text": "Assets"
     },
     {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          3,
-          1
-        ],
-        [
-          4,
-          1
-        ],
-        [
-          5,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 3,
-      "row_span": 3,
-      "text": "Current assets"
-    },
-    {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          6,
-          1
-        ],
-        [
-          7,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 6,
-      "row_span": 2,
-      "text": "Non-current assets"
-    },
-    {
       "column_index": 0,
       "column_span": 1,
       "covered_coordinates": [
@@ -180,25 +138,6 @@
       "row_index": 8,
       "row_span": 2,
       "text": "Liabilities"
-    },
-    {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          8,
-          1
-        ],
-        [
-          9,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 8,
-      "row_span": 2,
-      "text": "Current liabilities"
     }
   ],
   "expected_text_in_anchor_cells": [
@@ -253,6 +192,11 @@
       "text": "Current assets"
     },
     {
+      "column_index": 1,
+      "row_index": 4,
+      "text": "Cash"
+    },
+    {
       "column_index": 2,
       "row_index": 4,
       "text": "20"
@@ -266,6 +210,11 @@
       "column_index": 4,
       "row_index": 4,
       "text": "24"
+    },
+    {
+      "column_index": 1,
+      "row_index": 5,
+      "text": "Inventory"
     },
     {
       "column_index": 2,
@@ -286,6 +235,11 @@
       "column_index": 1,
       "row_index": 6,
       "text": "Non-current assets"
+    },
+    {
+      "column_index": 1,
+      "row_index": 7,
+      "text": "Property"
     },
     {
       "column_index": 2,
@@ -313,6 +267,11 @@
       "text": "Current liabilities"
     },
     {
+      "column_index": 1,
+      "row_index": 9,
+      "text": "Payables"
+    },
+    {
       "column_index": 2,
       "row_index": 9,
       "text": "22"
@@ -331,7 +290,7 @@
   "expected_unresolved_spans": [],
   "genuine_empty_coordinates": [],
   "header_rows": 3,
-  "logical_cell_count": 34,
+  "logical_cell_count": 38,
   "logical_cells": [
     {
       "column_index": 0,
@@ -519,20 +478,12 @@
         [
           3,
           1
-        ],
-        [
-          4,
-          1
-        ],
-        [
-          5,
-          1
         ]
       ],
       "is_header": false,
-      "is_stub": true,
+      "is_stub": false,
       "row_index": 3,
-      "row_span": 3,
+      "row_span": 1,
       "text": "Current assets"
     },
     {
@@ -581,6 +532,21 @@
       "text": ""
     },
     {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "Cash"
+    },
+    {
       "column_index": 2,
       "column_span": 1,
       "covered_coordinates": [
@@ -624,6 +590,21 @@
       "row_index": 4,
       "row_span": 1,
       "text": "24"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          5,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 5,
+      "row_span": 1,
+      "text": "Inventory"
     },
     {
       "column_index": 2,
@@ -677,16 +658,12 @@
         [
           6,
           1
-        ],
-        [
-          7,
-          1
         ]
       ],
       "is_header": false,
-      "is_stub": true,
+      "is_stub": false,
       "row_index": 6,
-      "row_span": 2,
+      "row_span": 1,
       "text": "Non-current assets"
     },
     {
@@ -733,6 +710,21 @@
       "row_index": 6,
       "row_span": 1,
       "text": ""
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          7,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 7,
+      "row_span": 1,
+      "text": "Property"
     },
     {
       "column_index": 2,
@@ -805,16 +797,12 @@
         [
           8,
           1
-        ],
-        [
-          9,
-          1
         ]
       ],
       "is_header": false,
-      "is_stub": true,
+      "is_stub": false,
       "row_index": 8,
-      "row_span": 2,
+      "row_span": 1,
       "text": "Current liabilities"
     },
     {
@@ -861,6 +849,21 @@
       "row_index": 8,
       "row_span": 1,
       "text": ""
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          9,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 9,
+      "row_span": 1,
+      "text": "Payables"
     },
     {
       "column_index": 2,
@@ -1030,48 +1033,6 @@
       "text": "Assets"
     },
     {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          3,
-          1
-        ],
-        [
-          4,
-          1
-        ],
-        [
-          5,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 3,
-      "row_span": 3,
-      "text": "Current assets"
-    },
-    {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          6,
-          1
-        ],
-        [
-          7,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 6,
-      "row_span": 2,
-      "text": "Non-current assets"
-    },
-    {
       "column_index": 0,
       "column_span": 1,
       "covered_coordinates": [
@@ -1089,25 +1050,6 @@
       "row_index": 8,
       "row_span": 2,
       "text": "Liabilities"
-    },
-    {
-      "column_index": 1,
-      "column_span": 1,
-      "covered_coordinates": [
-        [
-          8,
-          1
-        ],
-        [
-          9,
-          1
-        ]
-      ],
-      "is_header": false,
-      "is_stub": true,
-      "row_index": 8,
-      "row_span": 2,
-      "text": "Current liabilities"
     }
   ],
   "notes_and_footnotes": [],

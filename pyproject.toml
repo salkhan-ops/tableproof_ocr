@@ -17,7 +17,11 @@ dependencies = [
 [dependency-groups]
 # PyMuPDF (AGPL-3.0) is dev-only: it generates the committed benchmark fixture PDFs.
 # It is never a runtime dependency and never ships in the wheel.
-dev = ["pytest>=8,<9", "PyMuPDF>=1.24,<2"]
+dev = [
+    "pytest>=8,<9",
+    "PyMuPDF>=1.24,<2",
+    "reportlab>=4.2,<6",
+]
 
 [build-system]
 requires = ["hatchling>=1.27"]
