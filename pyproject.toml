@@ -6,14 +6,18 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
+# Runtime dependencies are permissive only (MIT/BSD/Apache/HPND). No AGPL/GPL.
 dependencies = [
-  "PyMuPDF>=1.24,<2",
-  "openpyxl>=3.1,<4",
-  "Pillow>=11",
+  "pdfplumber>=0.11,<0.12",   # MIT (pdfminer.six, MIT): native words with boxes
+  "pypdfium2>=4.30,<6",       # Apache-2.0 / BSD-3-Clause: page rendering
+  "openpyxl>=3.1,<4",         # MIT: XLSX export
+  "Pillow>=11",               # MIT-CMU (HPND)
 ]
 
 [dependency-groups]
-dev = ["pytest>=8,<9"]
+# PyMuPDF (AGPL-3.0) is dev-only: it generates the committed benchmark fixture PDFs.
+# It is never a runtime dependency and never ships in the wheel.
+dev = ["pytest>=8,<9", "PyMuPDF>=1.24,<2"]
 
 [build-system]
 requires = ["hatchling>=1.27"]
