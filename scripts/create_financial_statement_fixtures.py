@@ -231,7 +231,7 @@ def tables() -> list[Table]:
     soce = Table(
         "fs04_changes_in_equity",
         ["Synthetic Holdings Limited", "Statement of changes in equity", "For the year ended 30 June 2025"],
-        [300.0, 375.0, 450.0, 525.0],
+        [250.0, 345.0, 440.0, 530.0],
         None,
         [
             Row("", ["Share capital", "Retained earnings", "Revaluation reserve", "Total"], "", H),
@@ -284,7 +284,7 @@ def tables() -> list[Table]:
     notes = Table(
         "fs06_note_ppe_currency",
         ["Synthetic Holdings Limited", "Notes to the financial statements", "5  Property, plant and equipment"],
-        [300.0, 375.0, 450.0, 525.0],
+        [250.0, 345.0, 440.0, 530.0],
         None,
         [
             Row("", ["Land", "Buildings", "Plant and machinery", "Total"], "", H),

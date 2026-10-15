@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pytest
 
-from tableproof.models import WordBox
+from tableproof.models import ReconstructionOptions, WordBox
 from tableproof.pdf_extractor import extract_words
 from tableproof.table_reconstructor import reconstruct_table_grid
 
@@ -28,7 +28,10 @@ CASES = [
 def _grid(gt_path: Path, page: int):
     pdf = gt_path.with_name(gt_path.name.replace(".gt.json", ".pdf"))
     words = extract_words(pdf, page).words
-    return reconstruct_table_grid([WordBox(i, w.text, w.bbox) for i, w in enumerate(words)])
+    return reconstruct_table_grid(
+        [WordBox(i, w.text, w.bbox) for i, w in enumerate(words)],
+        options=ReconstructionOptions(profile="financial_statement"),
+    )
 
 
 @pytest.mark.parametrize(("gt_path", "page"), CASES, ids=lambda v: getattr(v, "stem", str(v)))
@@ -38,13 +41,11 @@ def test_no_word_is_hidden_and_labels_survive(gt_path: Path, page: int) -> None:
     assert nwl["hidden_by_spans_word_indices"] == []
     assert nwl["passed"]
     tokens = {t for row in grid.matrix() for cell in row for t in (cell or "").split()}
-    unresolved = grid.metrics["continuation_resolution"]["unresolved_lines"]
-    reported = {t for line in unresolved for t in line["text"].split()}
     rows = json.loads(gt_path.read_text())["pages"][page - 1]
     for row in rows:
         for word in row[0].split():
-            # Every label word is in a cell, or explicitly reported as an unresolved line.
-            assert word in tokens | reported, f"label word {word!r} is missing from the output"
+            # Financial-statement profile: every label word is in an output cell.
+            assert word in tokens, f"label word {word!r} is missing from the output"
 
 
 @pytest.mark.parametrize(("gt_path", "page"), CASES, ids=lambda v: getattr(v, "stem", str(v)))

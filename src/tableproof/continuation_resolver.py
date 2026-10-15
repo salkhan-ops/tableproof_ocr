@@ -127,7 +127,7 @@ def resolve_continuations(
                 )
             )
             warnings.append(ReconstructionWarning(WARNING_AMBIGUOUS_CONTINUATION, f"Visual line {row.row_index} left unresolved", row_index=row.row_index))
-            remove_rows.add(row.row_index)
+            _drop_or_keep(row.row_index, metrics, remove_rows, warnings)
         elif best.candidate_type == "STANDALONE_TABLE_ROW" and feature_lookup.get(row.row_index, {}).get("terminal_punctuation") and feature_lookup.get(row.row_index, {}).get("is_sparse"):
             unresolved.append(
                 UnresolvedLine(
@@ -139,7 +139,7 @@ def resolve_continuations(
                 )
             )
             warnings.append(ReconstructionWarning(WARNING_UNRESOLVED_VISUAL_LINE, f"Visual line {row.row_index} preserved as unresolved standalone text", row_index=row.row_index))
-            remove_rows.add(row.row_index)
+            _drop_or_keep(row.row_index, metrics, remove_rows, warnings)
 
     target_updates = _redirect_chained_decisions(selected, selected_sources, remove_rows)
     resolved_rows = _apply_decisions(rows, remove_rows, target_updates)
@@ -564,3 +564,26 @@ def _no_word_loss(
         "duplicated_word_indices": duplicates,
         "passed": not (raw_words - accounted) and not duplicates,
     }
+
+
+WARNING_UNRESOLVED_LINE_KEPT = "UNRESOLVED_LINE_KEPT"
+
+
+def _drop_or_keep(
+    row_index: int,
+    metrics: dict[str, Any],
+    remove_rows: set[int],
+    warnings: list[ReconstructionWarning],
+) -> None:
+    """Default: an unresolved line leaves the grid (it stays in diagnostics). With
+    ``keep_unresolved_lines`` (financial-statement profile) it stays as its own row, flagged."""
+    if metrics.get("keep_unresolved_lines"):
+        warnings.append(
+            ReconstructionWarning(
+                WARNING_UNRESOLVED_LINE_KEPT,
+                f"Visual line {row_index} kept as a standalone row",
+                row_index=row_index,
+            )
+        )
+        return
+    remove_rows.add(row_index)

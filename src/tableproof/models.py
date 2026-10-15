@@ -814,3 +814,27 @@ class PageMetadata:
         data = asdict(self)
         data["crop_bbox"] = self.crop_bbox.to_dict()
         return data
+
+
+@dataclass(frozen=True)
+class ReconstructionOptions:
+    """How to reconstruct a table.
+
+    ``profile="financial_statement"``: unresolved lines (section headings such as "ASSETS",
+    "Adjustments for:") stay in the grid as standalone rows instead of moving to diagnostics,
+    because every label of a statement must reach the caller. The default profile keeps the
+    frozen baseline behaviour.
+    """
+
+    profile: str = "default"
+    keep_unresolved_lines: bool | None = None
+
+    def __post_init__(self) -> None:
+        if self.profile not in {"default", "financial_statement"}:
+            raise ValueError(f"unknown reconstruction profile: {self.profile}")
+
+    @property
+    def keeps_unresolved_lines(self) -> bool:
+        if self.keep_unresolved_lines is not None:
+            return self.keep_unresolved_lines
+        return self.profile == "financial_statement"

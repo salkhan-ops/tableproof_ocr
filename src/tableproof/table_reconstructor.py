@@ -11,6 +11,7 @@ from typing import Any
 from tableproof.continuation_resolver import resolve_continuations
 from tableproof.diagnostic_renderer import render_diagnostic_png
 from tableproof.models import (
+    ReconstructionOptions,
     BoundingBox,
     Cell,
     ExcludedTextBlock,
@@ -189,8 +190,12 @@ def reconstruct_table_grid(
     row_tolerance: float | None = None,
     column_tolerance: float | None = None,
     debug: bool = False,
+    options: ReconstructionOptions | None = None,
 ) -> TableGrid:
+    options = options or ReconstructionOptions()
     metrics = _adaptive_metrics(words, row_tolerance, column_tolerance)
+    metrics["profile"] = options.profile
+    metrics["keep_unresolved_lines"] = options.keeps_unresolved_lines
     raw_rows, row_warnings = _cluster_rows(words, metrics["row_tolerance"])
     raw_rows.sort(key=lambda row: (row.bbox.y0, row.bbox.x0))
 
