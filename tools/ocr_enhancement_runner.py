@@ -47,7 +47,7 @@ def run_ocr_enhancement() -> dict[str, Any]:
         record["ocr_table_id"]: [OcrWordBox.from_dict(item) for item in record["ground_truth_word_boxes"]]
         for record in gt_records
     }
-    engine = TesseractOcrEngine(_tesseract_executable())
+    engine = TesseractOcrEngine(_tesseract_executable(), keep_raw_response=True)
 
     word_rows: list[dict[str, Any]] = []
     geometry_rows: list[dict[str, Any]] = []

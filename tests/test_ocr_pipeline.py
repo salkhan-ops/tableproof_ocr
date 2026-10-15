@@ -114,3 +114,44 @@ def test_deterministic_image_degradation(tmp_path: Path) -> None:
 
     assert first.read_bytes() == second.read_bytes()
     assert first_words == second_words
+
+
+TSV_HEADER = "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext"
+
+
+def test_tsv_quote_characters_are_text_not_csv_quotes() -> None:
+    from tableproof.ocr_engine import parse_tsv
+
+    rows = [TSV_HEADER]
+    texts = ['Rs.', '"000', "Profit", "1,373,549", "1,254,407", 'x"', "Depreciation", "145,200"]
+    for n, text in enumerate(texts):
+        rows.append(f"5\t1\t1\t1\t{n // 3 + 1}\t{n % 3 + 1}\t{10 + 50 * n}\t20\t40\t12\t91.5\t{text}")
+    words = parse_tsv("\n".join(rows), page_number=3)
+    # Default csv quoting dropped every word after the first '"' into one bogus field.
+    assert [w.text for w in words] == texts
+    assert all(w.page_number == 3 for w in words)
+    assert words[1].raw_text == '"000'
+    assert words[0].confidence == 0.915
+
+
+def test_tesseract_errors_do_not_leak_paths_or_stderr(tmp_path: Path) -> None:
+    import pytest
+
+    from tableproof.ocr_engine import OcrEngineError, TesseractOcrEngine
+
+    engine = TesseractOcrEngine("tesseract-binary-that-does-not-exist")
+    with pytest.raises(OcrEngineError) as info:
+        engine.recognise_bytes(b"not an image")
+    assert str(tmp_path) not in str(info.value)
+    with pytest.raises(OcrEngineError) as missing:
+        engine.recognise(tmp_path / "secret-client-name.png")
+    assert "secret-client-name" not in str(missing.value)
+
+
+def test_engine_command_pins_languages_and_data_dir() -> None:
+    from tableproof.ocr_engine import TesseractOcrEngine
+
+    engine = TesseractOcrEngine(languages=("eng", "urd"), tessdata_dir="/opt/tessdata")
+    command = engine._command("stdin")
+    assert command[command.index("-l") + 1] == "eng+urd"
+    assert command[command.index("--tessdata-dir") + 1] == "/opt/tessdata"

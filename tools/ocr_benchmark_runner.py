@@ -54,7 +54,7 @@ def run_ocr_benchmark() -> dict[str, Any]:
         encoding="utf-8",
     )
 
-    engine = TesseractOcrEngine(_tesseract_executable())
+    engine = TesseractOcrEngine(_tesseract_executable(), keep_raw_response=True)
     word_rows: list[dict[str, Any]] = []
     geometry_rows: list[dict[str, Any]] = []
     table_rows: list[dict[str, Any]] = []
