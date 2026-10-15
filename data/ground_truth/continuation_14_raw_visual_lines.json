@@ -1,0 +1,47 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Category",
+      "Current",
+      "Prior",
+      "Change"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Long-term operating and",
+      "125",
+      "",
+      "8.5%"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "administrative expenses",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "line_index": 3,
+    "cells": [
+      "Revenue",
+      "300",
+      "275",
+      "9.1%"
+    ]
+  },
+  {
+    "line_index": 4,
+    "cells": [
+      "Assets",
+      "500",
+      "490",
+      "2.0%"
+    ]
+  }
+]

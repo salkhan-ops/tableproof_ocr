@@ -1,0 +1,23 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Item",
+      "Value"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Alpha",
+      "100"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "maybe continued.",
+      ""
+    ]
+  }
+]

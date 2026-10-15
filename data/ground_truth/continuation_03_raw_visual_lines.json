@@ -1,0 +1,26 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Metric",
+      "Current period",
+      "Prior value"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "",
+      "value",
+      ""
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "Revenue",
+      "100",
+      "90"
+    ]
+  }
+]

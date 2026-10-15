@@ -1,0 +1,427 @@
+{
+  "body_rows": 3,
+  "header_rows": 2,
+  "logical_cell_count": 21,
+  "logical_cells": [
+    {
+      "bounding_box": null,
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Category"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Q1 Results"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Q2 Results"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": ""
+    },
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Revenue"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          2
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Cost"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Revenue"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          4
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Cost"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 2,
+      "row_span": 3,
+      "text": "Consumer Products"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "100"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          2
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "70"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          3
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "120"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          4
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "80"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "90"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          2
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "60"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          3
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "110"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          4
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "75"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "190"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          2
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "130"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          3
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "230"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          4
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "155"
+    }
+  ],
+  "merged_ranges": [
+    {
+      "bounding_box": null,
+      "column_index": 1,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Q1 Results"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 3,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Q2 Results"
+    },
+    {
+      "bounding_box": null,
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 2,
+      "row_span": 3,
+      "text": "Consumer Products"
+    }
+  ],
+  "physical_columns": 5,
+  "physical_rows": 5
+}

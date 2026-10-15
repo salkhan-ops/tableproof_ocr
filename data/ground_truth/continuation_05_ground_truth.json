@@ -1,0 +1,209 @@
+{
+  "case_types": [
+    "Multi-line simple header"
+  ],
+  "column_spans": [],
+  "expected_continuations": [
+    {
+      "continuation_type": "MULTI_LINE_HEADER",
+      "expected_final_text": "Three-month return",
+      "expected_joining_mode": "SPACE_JOIN",
+      "source_visual_line_indices": [
+        1
+      ],
+      "target_column": 0,
+      "target_row": 0
+    },
+    {
+      "continuation_type": "MULTI_LINE_HEADER",
+      "expected_final_text": "Twelve-month return",
+      "expected_joining_mode": "SPACE_JOIN",
+      "source_visual_line_indices": [
+        1
+      ],
+      "target_column": 1,
+      "target_row": 0
+    }
+  ],
+  "expected_empty_cells": [],
+  "expected_footnotes": [],
+  "expected_merged_ranges": [],
+  "expected_unresolved_lines": [],
+  "logical_cell_count": 4,
+  "logical_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Three-month return"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Twelve-month return"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "5%"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "12%"
+    }
+  ],
+  "merged_ranges": [],
+  "multi_line_cells": [
+    {
+      "continuation_type": "MULTI_LINE_HEADER",
+      "expected_final_text": "Three-month return",
+      "expected_joining_mode": "SPACE_JOIN",
+      "source_visual_line_indices": [
+        1
+      ],
+      "target_column": 0,
+      "target_row": 0
+    },
+    {
+      "continuation_type": "MULTI_LINE_HEADER",
+      "expected_final_text": "Twelve-month return",
+      "expected_joining_mode": "SPACE_JOIN",
+      "source_visual_line_indices": [
+        1
+      ],
+      "target_column": 1,
+      "target_row": 0
+    }
+  ],
+  "notes_and_footnotes": [],
+  "ordinary_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Three-month return"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Twelve-month return"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "5%"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "12%"
+    }
+  ],
+  "physical_columns": 2,
+  "physical_rows": 2,
+  "raw_visual_lines": [
+    {
+      "cells": [
+        "Three-month",
+        "Twelve-month"
+      ],
+      "line_index": 0
+    },
+    {
+      "cells": [
+        "return",
+        "return"
+      ],
+      "line_index": 1
+    },
+    {
+      "cells": [
+        "5%",
+        "12%"
+      ],
+      "line_index": 2
+    }
+  ],
+  "row_spans": [],
+  "section_headers": [],
+  "source_word_mappings": []
+}

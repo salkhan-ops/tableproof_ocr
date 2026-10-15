@@ -1,0 +1,23 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Three-month",
+      "Twelve-month"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "return",
+      "return"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "5%",
+      "12%"
+    ]
+  }
+]

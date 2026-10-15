@@ -1,0 +1,62 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Category",
+      "Short-term operating",
+      "",
+      "Long-term financial",
+      ""
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "",
+      "performance measures",
+      "",
+      "performance measures",
+      ""
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "",
+      "Revenue",
+      "Cost",
+      "Assets",
+      "Liabilities"
+    ]
+  },
+  {
+    "line_index": 3,
+    "cells": [
+      "A",
+      "100",
+      "70",
+      "450",
+      "210"
+    ]
+  },
+  {
+    "line_index": 4,
+    "cells": [
+      "B",
+      "120",
+      "80",
+      "500",
+      "240"
+    ]
+  },
+  {
+    "line_index": 5,
+    "cells": [
+      "C",
+      "90",
+      "65",
+      "410",
+      "190"
+    ]
+  }
+]

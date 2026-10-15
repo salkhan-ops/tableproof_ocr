@@ -1,0 +1,172 @@
+{
+  "case_types": [
+    "Significance-star legend outside the grid",
+    "Footnote close to the final row"
+  ],
+  "column_spans": [],
+  "expected_continuations": [],
+  "expected_empty_cells": [],
+  "expected_footnotes": [
+    "*** p<0.01, ** p<0.05, * p<0.10"
+  ],
+  "expected_merged_ranges": [],
+  "expected_unresolved_lines": [],
+  "logical_cell_count": 4,
+  "logical_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Variable"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Model"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Variable A"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "0.125***"
+    }
+  ],
+  "merged_ranges": [],
+  "multi_line_cells": [],
+  "notes_and_footnotes": [
+    "*** p<0.01, ** p<0.05, * p<0.10"
+  ],
+  "ordinary_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Variable"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Model"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Variable A"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "0.125***"
+    }
+  ],
+  "physical_columns": 2,
+  "physical_rows": 2,
+  "raw_visual_lines": [
+    {
+      "cells": [
+        "Variable",
+        "Model"
+      ],
+      "line_index": 0
+    },
+    {
+      "cells": [
+        "Variable A",
+        "0.125***"
+      ],
+      "line_index": 1
+    },
+    {
+      "cells": [
+        "*** p<0.01, ** p<0.05, * p<0.10",
+        ""
+      ],
+      "line_index": 2
+    }
+  ],
+  "row_spans": [],
+  "section_headers": [],
+  "source_word_mappings": []
+}

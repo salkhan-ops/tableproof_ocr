@@ -1,0 +1,5 @@
+,Sales,Costs,Profit,Assets
+Sales,1.00,,,
+Costs,0.82,1.00,,
+Profit,0.41,0.12,1.00,
+Assets,0.55,0.49,0.38,1.00

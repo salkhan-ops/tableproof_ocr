@@ -1,0 +1,7 @@
+Variable,Model 1,Model 2,Model 3
+Treatment,0.125**,0.118**,0.097*
+,(0.041),(0.039),(0.052)
+Baseline score,0.332***,0.301***,0.287***
+,(0.072),(0.068),(0.066)
+Controls,No,Yes,Yes
+Observations,1200,1200,1200

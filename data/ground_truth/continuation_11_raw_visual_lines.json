@@ -1,0 +1,56 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Item",
+      "Units",
+      "Status",
+      "Explanation"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Product A",
+      "12",
+      "Active",
+      "Available throughout the"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "",
+      "",
+      "",
+      "reporting period"
+    ]
+  },
+  {
+    "line_index": 3,
+    "cells": [
+      "Product B",
+      "9",
+      "Closed",
+      "Discontinued"
+    ]
+  },
+  {
+    "line_index": 4,
+    "cells": [
+      "Product C",
+      "15",
+      "Active",
+      "Available"
+    ]
+  },
+  {
+    "line_index": 5,
+    "cells": [
+      "Product D",
+      "18",
+      "Active",
+      "Deferred"
+    ]
+  }
+]

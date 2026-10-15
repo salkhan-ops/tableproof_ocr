@@ -1,0 +1,23 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Item",
+      "Status"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Alpha",
+      "Open"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "Total observations available",
+      "Internal"
+    ]
+  }
+]

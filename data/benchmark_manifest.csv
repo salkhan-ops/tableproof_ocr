@@ -1,0 +1,6 @@
+table_id,pdf_path,page_number,bbox,category,ground_truth_path,ground_truth_json_path,expected_rows,expected_columns,difficulty_notes,born_digital,manually_verified
+benchmark_01,data/raw_pdfs/benchmark_01.pdf,1,"54,72,360,174",simple financial table,data/ground_truth/benchmark_01_ground_truth.csv,,4,4,Compact financial table with percentages and parentheses.,true,true
+benchmark_02,data/raw_pdfs/benchmark_02.pdf,1,"54,72,430,238",regression table,data/ground_truth/benchmark_02_ground_truth.csv,,7,4,"Coefficients, parenthetical standard errors, stars, and observations.",true,true
+benchmark_03,data/raw_pdfs/benchmark_03.pdf,1,"54,72,410,198",correlation matrix,data/ground_truth/benchmark_03_ground_truth.csv,,5,5,Lower-triangular matrix with intentional empty upper-triangle cells.,true,true
+benchmark_04,data/raw_pdfs/benchmark_04.pdf,1,"54,72,430,198",multi-level spanning headers,data/ground_truth/benchmark_04_ground_truth.xlsx,data/ground_truth/benchmark_04_ground_truth.json,5,5,Two-level header with adjacent column spans and a row-spanning stub label.,true,true
+benchmark_05,data/raw_pdfs/benchmark_05.pdf,1,"54,72,410,212",borderless table with footnote,data/ground_truth/benchmark_05_ground_truth.csv,,4,4,Borderless text table; bbox includes footnote beneath table to measure intrusion.,true,true

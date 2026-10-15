@@ -1,0 +1,14 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+outputs/extracted_tables/*
+outputs/diagnostics/*
+outputs/evaluation/*
+!outputs/extracted_tables/.gitkeep
+!outputs/diagnostics/.gitkeep
+!outputs/evaluation/.gitkeep
+outputs/ocr/
+outputs/ocr_enhanced/
+.DS_Store

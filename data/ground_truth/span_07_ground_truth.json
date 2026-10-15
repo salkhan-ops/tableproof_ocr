@@ -1,0 +1,795 @@
+{
+  "body_rows": 2,
+  "expected_merged_ranges": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": true,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Actual"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Forecast"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Near term"
+    },
+    {
+      "column_index": 4,
+      "column_span": 3,
+      "covered_coordinates": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Scenario"
+    }
+  ],
+  "expected_text_in_anchor_cells": [
+    {
+      "column_index": 0,
+      "row_index": 0,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "row_index": 0,
+      "text": "Actual"
+    },
+    {
+      "column_index": 2,
+      "row_index": 0,
+      "text": "Forecast"
+    },
+    {
+      "column_index": 4,
+      "row_index": 0,
+      "text": "Scenario"
+    },
+    {
+      "column_index": 2,
+      "row_index": 1,
+      "text": "Near term"
+    },
+    {
+      "column_index": 4,
+      "row_index": 1,
+      "text": "Base"
+    },
+    {
+      "column_index": 5,
+      "row_index": 1,
+      "text": "Upside"
+    },
+    {
+      "column_index": 6,
+      "row_index": 1,
+      "text": "Downside"
+    },
+    {
+      "column_index": 2,
+      "row_index": 2,
+      "text": "2024"
+    },
+    {
+      "column_index": 3,
+      "row_index": 2,
+      "text": "2025"
+    },
+    {
+      "column_index": 0,
+      "row_index": 3,
+      "text": "A"
+    },
+    {
+      "column_index": 1,
+      "row_index": 3,
+      "text": "10"
+    },
+    {
+      "column_index": 2,
+      "row_index": 3,
+      "text": "12"
+    },
+    {
+      "column_index": 3,
+      "row_index": 3,
+      "text": "14"
+    },
+    {
+      "column_index": 4,
+      "row_index": 3,
+      "text": "16"
+    },
+    {
+      "column_index": 5,
+      "row_index": 3,
+      "text": "18"
+    },
+    {
+      "column_index": 6,
+      "row_index": 3,
+      "text": "15"
+    },
+    {
+      "column_index": 0,
+      "row_index": 4,
+      "text": "B"
+    },
+    {
+      "column_index": 1,
+      "row_index": 4,
+      "text": "11"
+    },
+    {
+      "column_index": 2,
+      "row_index": 4,
+      "text": "13"
+    },
+    {
+      "column_index": 3,
+      "row_index": 4,
+      "text": "15"
+    },
+    {
+      "column_index": 4,
+      "row_index": 4,
+      "text": "17"
+    },
+    {
+      "column_index": 5,
+      "row_index": 4,
+      "text": "19"
+    },
+    {
+      "column_index": 6,
+      "row_index": 4,
+      "text": "16"
+    }
+  ],
+  "expected_unresolved_spans": [],
+  "genuine_empty_coordinates": [],
+  "header_rows": 3,
+  "logical_cell_count": 27,
+  "logical_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": true,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Actual"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Forecast"
+    },
+    {
+      "column_index": 4,
+      "column_span": 3,
+      "covered_coordinates": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Scenario"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Near term"
+    },
+    {
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          4
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Base"
+    },
+    {
+      "column_index": 5,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          5
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Upside"
+    },
+    {
+      "column_index": 6,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          6
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Downside"
+    },
+    {
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          2
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "2024"
+    },
+    {
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "2025"
+    },
+    {
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          4
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": ""
+    },
+    {
+      "column_index": 5,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          5
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": ""
+    },
+    {
+      "column_index": 6,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          6
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": ""
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "A"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "10"
+    },
+    {
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          2
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "12"
+    },
+    {
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          3
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "14"
+    },
+    {
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          4
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "16"
+    },
+    {
+      "column_index": 5,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          5
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "18"
+    },
+    {
+      "column_index": 6,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          3,
+          6
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 3,
+      "row_span": 1,
+      "text": "15"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "B"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "11"
+    },
+    {
+      "column_index": 2,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          2
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "13"
+    },
+    {
+      "column_index": 3,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          3
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "15"
+    },
+    {
+      "column_index": 4,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          4
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "17"
+    },
+    {
+      "column_index": 5,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          5
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "19"
+    },
+    {
+      "column_index": 6,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          4,
+          6
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 4,
+      "row_span": 1,
+      "text": "16"
+    }
+  ],
+  "manually_verified": true,
+  "merged_ranges": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": true,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 3,
+      "text": "Actual"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Forecast"
+    },
+    {
+      "column_index": 2,
+      "column_span": 2,
+      "covered_coordinates": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Near term"
+    },
+    {
+      "column_index": 4,
+      "column_span": 3,
+      "covered_coordinates": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Scenario"
+    }
+  ],
+  "notes_and_footnotes": [],
+  "parent_child_hierarchy": [],
+  "physical_columns": 7,
+  "physical_rows": 5,
+  "row_group_boundaries": [],
+  "section_boundaries": [],
+  "sibling_relationships": [],
+  "table_id": "span_07"
+}

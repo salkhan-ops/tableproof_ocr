@@ -1,0 +1,65 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Variable",
+      "Mean",
+      "Median",
+      "N"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Panel A: Full Sample",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "Revenue",
+      "10.2",
+      "9.8",
+      "200"
+    ]
+  },
+  {
+    "line_index": 3,
+    "cells": [
+      "Assets",
+      "45.1",
+      "42.0",
+      "200"
+    ]
+  },
+  {
+    "line_index": 4,
+    "cells": [
+      "Panel B: Restricted Sample",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "line_index": 5,
+    "cells": [
+      "Revenue",
+      "11.5",
+      "10.7",
+      "120"
+    ]
+  },
+  {
+    "line_index": 6,
+    "cells": [
+      "Assets",
+      "48.3",
+      "44.2",
+      "120"
+    ]
+  }
+]

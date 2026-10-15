@@ -1,0 +1,227 @@
+{
+  "case_types": [
+    "Genuine all-text table row"
+  ],
+  "column_spans": [],
+  "expected_continuations": [],
+  "expected_empty_cells": [],
+  "expected_footnotes": [],
+  "expected_merged_ranges": [],
+  "expected_unresolved_lines": [],
+  "logical_cell_count": 6,
+  "logical_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Status"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Alpha"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Open"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "Total observations available"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "Internal"
+    }
+  ],
+  "merged_ranges": [],
+  "multi_line_cells": [],
+  "notes_and_footnotes": [],
+  "ordinary_cells": [
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Item"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          0,
+          1
+        ]
+      ],
+      "is_header": true,
+      "is_stub": false,
+      "row_index": 0,
+      "row_span": 1,
+      "text": "Status"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Alpha"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          1,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 1,
+      "row_span": 1,
+      "text": "Open"
+    },
+    {
+      "column_index": 0,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          0
+        ]
+      ],
+      "is_header": false,
+      "is_stub": true,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "Total observations available"
+    },
+    {
+      "column_index": 1,
+      "column_span": 1,
+      "covered_coordinates": [
+        [
+          2,
+          1
+        ]
+      ],
+      "is_header": false,
+      "is_stub": false,
+      "row_index": 2,
+      "row_span": 1,
+      "text": "Internal"
+    }
+  ],
+  "physical_columns": 2,
+  "physical_rows": 3,
+  "raw_visual_lines": [
+    {
+      "cells": [
+        "Item",
+        "Status"
+      ],
+      "line_index": 0
+    },
+    {
+      "cells": [
+        "Alpha",
+        "Open"
+      ],
+      "line_index": 1
+    },
+    {
+      "cells": [
+        "Total observations available",
+        "Internal"
+      ],
+      "line_index": 2
+    }
+  ],
+  "row_spans": [],
+  "section_headers": [],
+  "source_word_mappings": []
+}

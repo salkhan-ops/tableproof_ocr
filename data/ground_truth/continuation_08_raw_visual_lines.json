@@ -1,0 +1,23 @@
+[
+  {
+    "line_index": 0,
+    "cells": [
+      "Variable",
+      "Model"
+    ]
+  },
+  {
+    "line_index": 1,
+    "cells": [
+      "Variable A",
+      "0.125***"
+    ]
+  },
+  {
+    "line_index": 2,
+    "cells": [
+      "*** p<0.01, ** p<0.05, * p<0.10",
+      ""
+    ]
+  }
+]
