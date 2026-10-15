@@ -1,5 +1,18 @@
 # TableProof OCR Structure Baseline
 
+## v0.2.0 (2026-10-15): re-verified
+
+- Git: tag `v0.2.0` (commit recorded by the tag; the code is under version control since v0.2.0).
+- Python 3.14, uv; word source pdfplumber (PyMuPDF removed from the library).
+- Pytest: 119 passed (incl. financial-statement gates and the OCR regression).
+- Structure regression (`uv run python scripts/run_structure_regression.py`): 29/29 tables exact,
+  cell/numeric/placement/empty accuracy 1.00, 0 lost/duplicated words, 0 false/missed spans,
+  **against the corrected span_09 ground truth** (see CHANGELOG).
+- Input fixture checksums: `outputs/baseline/v0.2.0/data-checksums.sha256`.
+
+## v0.1.0 (frozen 2026-07-25, kept for history)
+
+
 Version/tag: `v0.1.0-born-digital-structure-baseline`
 
 Date: 2026-07-25

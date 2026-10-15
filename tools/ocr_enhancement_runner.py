@@ -139,7 +139,12 @@ def _run_structure_eval(table_id: str, item: dict[str, Any], words: list[OcrWord
 def _summary(word_rows: list[dict[str, Any]], geometry_rows: list[dict[str, Any]], table_rows: list[dict[str, Any]], attribution_rows: list[dict[str, Any]]) -> dict[str, Any]:
     baseline = json.loads((BASE_EVAL_DIR / "ocr_summary.json").read_text(encoding="utf-8"))
     summary = {
-        "phase_status": "PASS",
+        # PASS only when every image was processed and at least as many tables match exactly as
+        # in the raw baseline run (was a hard-coded literal before v0.2.0).
+        "phase_status": "PASS"
+        if len(table_rows) == len(word_rows) and _table_summary(table_rows)["whole_table_exact_matches"]
+        >= baseline["table_results"].get("whole_table_exact_matches", 0)
+        else "FAIL",
         "enhancement": "deterministic_tesseract_preprocessing_and_significance_marker_correction",
         "images_processed": len(table_rows),
         "significance_marker_corrections_applied": sum(

@@ -1,6 +1,6 @@
 [project]
 name = "tableproof"
-version = "0.2.0.dev0"
+version = "0.2.0"
 description = "Deterministic table reconstruction from born-digital PDFs and OCR word boxes."
 readme = "README.md"
 requires-python = ">=3.12"
