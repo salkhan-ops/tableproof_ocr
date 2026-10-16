@@ -31,7 +31,8 @@ DEFAULT_DPI = 300
 _PDFIUM_LOCK = threading.Lock()
 _X_TOLERANCE = 1.5  # points between characters that still belong to one word
 _Y_TOLERANCE = 3.0
-_LINE_TOLERANCE = 2.0  # words whose tops differ by less than this share a line number
+_LINE_TOLERANCE = 2.0
+_SKEW = 1e-3  # |b|/a and |c|/d below this are rounding, not rotation  # words whose tops differ by less than this share a line number
 
 PdfSource = Path | str | bytes
 
@@ -82,11 +83,31 @@ def extract_words(
         x0, top, x1, bottom = (float(v) for v in page.bbox)
         if clip is not None:
             _validate_bbox_within_page(clip, x0, top, x1, bottom)
+        straighten_chars(page.chars)
         raw = page.extract_words(
             x_tolerance=_X_TOLERANCE, y_tolerance=_Y_TOLERANCE, keep_blank_chars=False
         )
     selected = [w for w in raw if clip is None or _intersects(w, clip)]
     return PageWords(page_number, x1 - x0, bottom - top, _numbered(selected))
+
+
+def straighten_chars(chars: list[dict[str, Any]]) -> int:
+    """Mark characters whose text matrix is upright up to rounding (|b|, |c| tiny) as upright.
+
+    pdfplumber treats any non-zero skew as rotated text and groups such characters into
+    vertical "words", so a page written with a 1e-7 skew (seen in real filings) comes out one
+    letter per word. Truly rotated text keeps its direction. Returns how many were changed.
+    """
+    changed = 0
+    for char in chars:
+        matrix = char.get("matrix")
+        if char.get("upright") or not matrix:
+            continue
+        a, b, c, d = (float(v) for v in matrix[:4])
+        if a > 0 and d > 0 and abs(b) <= _SKEW * a and abs(c) <= _SKEW * d:
+            char["upright"] = True
+            changed += 1
+    return changed
 
 
 def _intersects(word: dict[str, Any], clip: BoundingBox) -> bool:
