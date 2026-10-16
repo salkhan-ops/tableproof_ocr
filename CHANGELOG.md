@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.2 (2026-10-16)
+
+### Fixed
+- `render_page()` / `api.render()` serialise all PDFium calls behind a process-wide lock.
+  PDFium is not thread-safe; concurrent renders from a web server's thread pool deadlocked the
+  process.
+
 ## v0.2.1 (2026-10-15)
 
 ### Fixed

@@ -97,3 +97,15 @@ def test_small_skew_keeps_label_and_amounts_on_one_row(angle: float) -> None:
     assert deposits
     assert "2,500" in " ".join(deposits[0])
     assert result.diagnostics.deskew_degrees == pytest.approx(angle, abs=0.25)
+
+
+def test_concurrent_renders_do_not_deadlock() -> None:
+    """PDFium is not thread-safe; render() must serialise it (it deadlocked a web server)."""
+    from concurrent.futures import ThreadPoolExecutor, wait
+
+    data = SOFP.read_bytes()
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(render, data, 1, dpi=100) for _ in range(16)]
+        done, pending = wait(futures, timeout=60)
+    assert not pending
+    assert all(f.result().width > 0 for f in done)

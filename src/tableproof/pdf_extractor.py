@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import io
 import json
+import threading
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
@@ -27,6 +28,7 @@ if TYPE_CHECKING:
     from PIL.Image import Image
 
 DEFAULT_DPI = 300
+_PDFIUM_LOCK = threading.Lock()
 _X_TOLERANCE = 1.5  # points between characters that still belong to one word
 _Y_TOLERANCE = 3.0
 _LINE_TOLERANCE = 2.0  # words whose tops differ by less than this share a line number
@@ -124,6 +126,15 @@ def render_page(
     """Render a 1-based page (or a clip of it) to an RGB PIL image."""
     if dpi < 72:
         raise PdfExtractionError("DPI must be at least 72")
+    # PDFium is not thread-safe: concurrent calls from several threads can deadlock the
+    # process. All PDFium use in TableProof goes through this one lock.
+    with _PDFIUM_LOCK:
+        return _render_locked(source, page_number, dpi, clip)
+
+
+def _render_locked(
+    source: PdfSource, page_number: int, dpi: int, clip: BoundingBox | None
+) -> Image:
     try:
         document = pdfium.PdfDocument(source if isinstance(source, bytes) else str(source))
     except pdfium.PdfiumError as exc:
