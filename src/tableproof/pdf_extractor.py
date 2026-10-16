@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import threading
 from dataclasses import dataclass
 from pathlib import Path
@@ -87,6 +88,7 @@ def extract_words(
         raw = page.extract_words(
             x_tolerance=_X_TOLERANCE, y_tolerance=_Y_TOLERANCE, keep_blank_chars=False
         )
+    raw = merge_numeric_fragments(raw)
     selected = [w for w in raw if clip is None or _intersects(w, clip)]
     return PageWords(page_number, x1 - x0, bottom - top, _numbered(selected))
 
@@ -108,6 +110,40 @@ def straighten_chars(chars: list[dict[str, Any]]) -> int:
             char["upright"] = True
             changed += 1
     return changed
+
+
+_NUMERIC = re.compile(r"^[0-9.,()\-]+$")
+_OVERLAP_PT = 1.0
+_FRAGMENT_GAP = 0.15  # x font size (a word space is ~0.25 em): closer numeric pieces are one amount
+
+
+def merge_numeric_fragments(words: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Join numeric pieces that touch on the same line ("2" + ",576,613" -> "2,576,613").
+
+    Filings pad columns with space characters, and a space drawn inside an amount ends the
+    word, so one amount becomes two words. Only purely numeric neighbours closer than 0.15
+    of the font size (well below a word space) are joined; separate columns are far apart.
+    """
+    out: list[dict[str, Any]] = []
+    for word in sorted(words, key=lambda w: (round(float(w["top"]), 1), float(w["x0"]))):
+        prev = out[-1] if out else None
+        if (
+            prev is not None
+            and abs(float(prev["top"]) - float(word["top"])) < _LINE_TOLERANCE
+            and _NUMERIC.match(str(prev["text"]))
+            and _NUMERIC.match(str(word["text"]))
+            # Only a piece starting at (or a hair before) the end of the previous one: words of
+            # one line may arrive out of x order when their tops differ slightly.
+            and -_OVERLAP_PT
+            <= float(word["x0"]) - float(prev["x1"])
+            <= _FRAGMENT_GAP * max(float(word["bottom"]) - float(word["top"]), 1.0)
+        ):
+            prev["text"] = str(prev["text"]) + str(word["text"])
+            prev["x1"] = max(float(prev["x1"]), float(word["x1"]))
+            prev["bottom"] = max(float(prev["bottom"]), float(word["bottom"]))
+            continue
+        out.append(dict(word))
+    return out
 
 
 def _intersects(word: dict[str, Any], clip: BoundingBox) -> bool:
